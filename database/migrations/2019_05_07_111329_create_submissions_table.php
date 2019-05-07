@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProblemsTable extends Migration
+class CreateSubmissionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreateProblemsTable extends Migration
      */
     public function up()
     {
-        $table_name = 'problems';
-        Schema::create($table_name, function (Blueprint $table) {
+        Schema::create('submissions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('title');
-            $table->mediumText('description');
+            $table->integer('user_id');
+            $table->integer('problem_id');
+            $table->text('source');
+            $table->text('status')->default('Pending');
+            $table->integer('score')->nullable();
             $table->timestamps();
         });
-        DB::statement("ALTER TABLE $table_name ADD testdata LONGBLOB");
     }
 
     /**
@@ -30,6 +31,6 @@ class CreateProblemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('problems');
+        Schema::dropIfExists('submissions');
     }
 }

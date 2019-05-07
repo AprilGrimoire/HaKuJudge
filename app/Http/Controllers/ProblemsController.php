@@ -23,6 +23,7 @@ class ProblemsController extends Controller
     {
         $this->authorize('create', Problem::class);
         $problem = new Problem;
+        $problem->title = $request->title;
         $problem->description = $request->description;
         $problem->testdata = $request->file('testdata')->get();
         $problem->save();
@@ -38,5 +39,11 @@ class ProblemsController extends Controller
         $this->authorize('fetch', $problem);
         return ['description' => $problem->description,
                 'testdata' => base64_encode($problem->testdata)];
+    }
+
+    public function index()
+    {
+        $problems = Problem::paginate(100);
+        return view('problems.index', compact('problems'));
     }
 }
