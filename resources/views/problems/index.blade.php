@@ -1,11 +1,8 @@
-<html>
-    <head>
-        <meta charset="utf-8" />
-    </head>
-    <body>
-        @foreach ($problems as $problem)
-            <a href="{{ route('problems.show', $problem) }}">{{ $problem->title }}</a><br />
-        @endforeach
-        {!! $problems->render() !!}
-    </body>
-</html>
+@extends('layouts/default')
+
+@section('content')
+    @foreach ($problems as $problem)
+        <a href="{{ route('problems.show', $problem) }}">{{ $problem->title }}</a><br />
+    @endforeach
+    {!! $problems->render() !!}
+@stop

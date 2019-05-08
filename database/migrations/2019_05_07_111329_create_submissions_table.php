@@ -17,6 +17,7 @@ class CreateSubmissionsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id');
             $table->integer('problem_id');
+            $table->boolean('attached')->default(false);
             $table->text('source');
             $table->text('status')->default('Pending');
             $table->integer('score')->nullable();
