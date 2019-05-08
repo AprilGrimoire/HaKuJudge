@@ -20,6 +20,7 @@ class CreateSubmissionsTable extends Migration
             $table->boolean('attached')->default(false);
             $table->text('source');
             $table->text('status')->default('Pending');
+            $table->text('detail')->nullable();
             $table->integer('score')->nullable();
             $table->bigInteger('time')->nullable();
             $table->bigInteger('memory')->nullable();

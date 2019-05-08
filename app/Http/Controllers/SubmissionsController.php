@@ -71,6 +71,12 @@ class SubmissionsController extends Controller
         {
             $submission->memory = $request->memory;
         }
+        $submission->detail = $request->detail;
         $submission->save();
+    }
+
+    public function show(Submission $submission)
+    {
+        return view('submissions.show', compact('submission'));
     }
 }
