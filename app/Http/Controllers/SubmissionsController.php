@@ -63,6 +63,14 @@ class SubmissionsController extends Controller
         $this->authorize('judge');
         $submission->status = $request->status;
         $submission->score = $request->score;
+        if ($request->time)
+        {
+            $submission->time = $request->time;
+        }
+        if ($request->memory)
+        {
+            $submission->memory = $request->memory;
+        }
         $submission->save();
     }
 }

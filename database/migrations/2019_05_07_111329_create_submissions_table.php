@@ -21,6 +21,8 @@ class CreateSubmissionsTable extends Migration
             $table->text('source');
             $table->text('status')->default('Pending');
             $table->integer('score')->nullable();
+            $table->bigInteger('time')->nullable();
+            $table->bigInteger('memory')->nullable();
             $table->timestamps();
         });
     }
