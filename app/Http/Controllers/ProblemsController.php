@@ -31,7 +31,7 @@ class ProblemsController extends Controller
 
     public function show(Problem $problem)
     {
-        return $problem->description;
+        return view('problems.show', compact('problem'));
     }
 
     public function fetch(Problem $problem)

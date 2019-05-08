@@ -31,7 +31,7 @@ class SubmissionsController extends Controller
 
     public function index()
     {
-        $submissions = Submission::orderBy('created_at', 'desc')->paginate(25);
+        $submissions = Submission::orderBy('id', 'desc')->paginate(25);
         return view('submissions.index', compact('submissions'));
     }
 
