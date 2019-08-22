@@ -12,6 +12,11 @@
 */
 
 Route::get('/', 'StaticPagesController@index')->name('index');
+Route::get('/booklist', 'StaticPagesController@booklist')->name('booklist');
+Route::get('/about', 'StaticPagesController@about')->name('about');
+Route::get('/test', 'StaticPagesController@test')->name('test');
+Route::get('/services', 'StaticPagesController@services')->name('services');
+
 
 Auth::routes();
 
