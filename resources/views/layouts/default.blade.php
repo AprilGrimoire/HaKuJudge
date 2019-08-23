@@ -32,17 +32,21 @@
                     <span class="menu"></span>
                     <div class="top-menu">
                         <ul>                                              
-                            <li><a href="/">首页</a></li>
+                            <li><a href="/" id="/">首页</a></li>
                             <!-- class="active" -->
-                            <li><a href="{{ route('problems.index') }}" id="questionlist">题库</a></li>
-                            <li><a href="{{ route('about') }}">关于我们</a></li>
-                            <li><a href="{{ route('services') }}">进阶之旅</a></li>
-                            <li><a href="{{ route('test') }}">模拟测试</a></li>
-                            <li><a href="{{ route('home') }}">个人中心</a></li>
+                            <li><a href="{{ route('problems.index') }}" id="/problems">题库</a></li>
+                            <li><a href="{{ route('about') }}" id="/about">关于我们</a></li>
+                            <li><a href="{{ route('services') }}" id="/services">进阶之旅</a></li>
+                            <li><a href="{{ route('test') }}" id="/test">模拟测试</a></li>
+                            <li><a href="{{ route('home') }}" id="/home">个人中心</a></li>
                         </ul>
                     </div>
                     <!-- script for menu -->
                     <script>
+                    var loc=window.location.pathname;
+                    var dom=document.getElementById(loc);
+                    dom.className+="active";
+                    
                         $( "span.menu" ).click(function() {
                         $( ".top-menu" ).slideToggle( "slow", function() {
                             // Animation complete.
