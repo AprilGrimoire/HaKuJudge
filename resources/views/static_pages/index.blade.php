@@ -27,7 +27,7 @@
 						<p>•多种知识点的选择•</p>
 						<div class="icons">
 							<div class="icon-left">
-								<i class="call"></i>
+								<span class="glyphicon glyphicon-road glyphiconindex" />
 							</div>
 							<div class="icon-right">
 								<a href="services.html"><i class="arrow arrow1"></i></a>
@@ -41,7 +41,7 @@
 						<p>•(也许能看到未来的真题)•</p>
 						<div class="icons">
 							<div class="icon-left">
-								<i class="callmsg"></i>
+								<span class="glyphicon glyphicon-send glyphiconindex" />
 							</div>
 							<div class="icon-right">
 								<a href="test.html"><i class="arrow arrow2"></i></a>
