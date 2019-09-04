@@ -38,6 +38,7 @@
                             <li><a href="{{ route('about') }}" id="/about">关于我们</a></li>
                             <li><a href="{{ route('services') }}" id="/services">进阶之旅</a></li>
                             <li><a href="{{ route('test') }}" id="/test">模拟测试</a></li>
+                            <li><a href="{{ route('submissions.index') }}" id="/submissions">提交记录</a></li>
                             <li><a href="{{ route('home') }}" id="/home">个人中心</a></li>
                         </ul>
                     </div>

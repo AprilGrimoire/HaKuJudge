@@ -27,6 +27,7 @@ class SubmissionsController extends Controller
         $submission->source = $request->source;
         $submission->problem_id = $request->problem_id;
         $user->submissions()->save($submission);
+        return redirect('submissions');
     }
 
     public function index()
