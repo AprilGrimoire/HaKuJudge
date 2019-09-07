@@ -2,11 +2,11 @@
 <html>
     <head>
         <link href="{{ mix('css/app.css') }}" rel='stylesheet' type='text/css' />
-        <link href="css-temp/bootstrap.css" rel='stylesheet' type='text/css' />
+        <link href="/css-temp/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="js-temp/jquery.min.js"></script>
+        <script src="/js-temp/jquery.min.js"></script>
         <!-- Custom Theme files -->
-        <link href="css-temp/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/css-temp/style.css" rel="stylesheet" type="text/css" media="all" />
         <!-- Custom Theme files -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -25,14 +25,14 @@
         <div class="header">
             <div class="container">
                 <div class="logo">
-                    <a href="index.html"><img src="images/logo.png" class="img-responsive" alt="" width="110"/></a>
+                    <a href="{{ route('index') }}"><img src="/images/logo.png" class="img-responsive" alt="" width="110"/></a>
                 </div>
                 <div class="header-right">
                     <h4><i class="phone"></i></h4>
                     <span class="menu"></span>
                     <div class="top-menu">
                         <ul>                                              
-                            <li><a href="/" id="/">首页</a></li>
+                            <li><a href="{{ route('index') }}" id="/">首页</a></li>
                             <!-- class="active" -->
                             <li><a href="{{ route('problems.index') }}" id="/problems">题库</a></li>
                             <li><a href="{{ route('about') }}" id="/about">关于我们</a></li>
