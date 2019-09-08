@@ -1,8 +1,8 @@
 @extends('layouts.default')
 
 @section('content')
-<link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
-<script type="text/javascript" src="tablecloth/tablecloth.js"></script> 
+<link href="/tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="/tablecloth/tablecloth.js"></script> 
 	<table cellspacing="0" cellpadding="0" class="submission_container">
 		<tr>
 				<th>评测ID</th>

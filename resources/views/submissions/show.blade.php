@@ -1,5 +1,9 @@
 @extends('layouts.default')
 
+@section('head')
+    <title>提交详情</title>
+@endsection
+
 @section('content')
     @php
         $detail = json_decode($submission->detail);
