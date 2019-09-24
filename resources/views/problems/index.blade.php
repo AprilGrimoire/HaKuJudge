@@ -16,7 +16,9 @@
 
 		<!-- all you need with Tablecloth is a regular, well formed table. No need for id's, class names... --> 
 		
-			
+		@can("create", App\Models\Problem::class)
+			<a href="{{ route('problems.create') }}">新建题目</a>
+		@endcan
 		
 		<table cellspacing="0" cellpadding="0" class="question_container">
 			<tr>
