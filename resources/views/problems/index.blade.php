@@ -38,6 +38,5 @@
         <div class="text-center">
             {!! $problems->render() !!}
         </div>
-	</body>
 
 @endsection

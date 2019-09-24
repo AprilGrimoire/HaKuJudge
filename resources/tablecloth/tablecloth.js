@@ -178,6 +178,16 @@ this.tablecloth = function(){
 	};	*/
 };	
 };
+var col=document.getElementsByClassName("sub_state");
+	var len=col.length;
+	//alert(len);
+	for (var i=0;i<len;i++){
+		if (col[i].innerText=="Accepted") {col[i].children[0].style.color="green";}
+		if (col[i].innerText=="WrongAnswer") {col[i].children[0].style.color="red";}
+		if (col[i].innerText=="TimeLimitExceeded") {col[i].children[0].style.color="purple";}
+		if (col[i].innerText=="CompileError") {col[i].children[0].style.color="gold";}
+		if (col[i].innerText=="MemoryLimitExceeded") {col[i].children[0].style.color="#00008B";}
+	}
 	start();
 
 };

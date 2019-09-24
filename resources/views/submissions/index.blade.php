@@ -1,5 +1,7 @@
 @extends('layouts.default')
-
+@section('head')
+    <title>提交记录</title>
+@stop
 @section('content')
 <link href="/tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
 <script type="text/javascript" src="/tablecloth/tablecloth.js"></script> 
@@ -25,5 +27,8 @@
         <td class="sub_user">{{ $submission->user->name }}</td>
     </tr>
     @endforeach
-    {{ $submissions->render() }}
-@stop
+</table>
+    <div class="text-center">
+            {!! $submissions->render() !!}
+    </div>
+@endsection

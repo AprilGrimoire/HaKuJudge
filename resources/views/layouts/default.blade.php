@@ -45,7 +45,9 @@
                     <!-- script for menu -->
                     <script>
                     var loc=window.location.pathname;
-                    var dom=document.getElementById(loc);
+                    var strs=new Array();
+                    strs=loc.split('/');
+                    var dom=document.getElementById('/'+strs[1]);
                     dom.className+="active";
                     
                         $( "span.menu" ).click(function() {
