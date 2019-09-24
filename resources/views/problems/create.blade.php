@@ -30,6 +30,6 @@
         problem.json应为以下格式：[{单组数据}，{单组数据}，……]
     </p>
     <p>
-        单组数据应为以下格式：{"id":数据点编号，"input":"输入文件在problem目录中的相对路径"，"answer":"答案文件在problem目录中的相对路径"，"time":时间限制（毫秒），"memory":空间限制（字节）,"score":此测试点的最大得分}
+        单组数据应为以下格式：{"id":数据点编号，"input":"输入文件在problem目录中的相对路径"，"answer":"答案文件在problem目录中的相对路径"，"time":时间限制（毫秒），"memory":空间限制（KB）,"score":此测试点的最大得分}
     </p>
 @stop
