@@ -55,5 +55,7 @@
         </tr>
         @endforeach
     </table>
+    @else
+    <b>暂无测试点详情。</b>
     @endif
 @stop
