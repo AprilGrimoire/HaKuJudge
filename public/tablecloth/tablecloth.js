@@ -182,11 +182,12 @@ var col=document.getElementsByClassName("sub_state");
 	var len=col.length;
 	//alert(len);
 	for (var i=0;i<len;i++){
-		if (col[i].innerText=="Accepted") {col[i].children[0].style.color="green";}
-		if (col[i].innerText=="WrongAnswer") {col[i].children[0].style.color="red";}
-		if (col[i].innerText=="TimeLimitExceeded") {col[i].children[0].style.color="purple";}
-		if (col[i].innerText=="CompileError") {col[i].children[0].style.color="gold";}
-		if (col[i].innerText=="MemoryLimitExceeded") {col[i].children[0].style.color="#00008B";}
+		if (col[i].innerText.toLowerCase()=="accepted") {col[i].style.color="green";}
+		if (col[i].innerText.toLowerCase()=="wronganswer") {col[i].style.color="red";}
+		if (col[i].innerText.toLowerCase()=="timelimitexceeded") {col[i].style.color="purple";}
+		if (col[i].innerText.toLowerCase()=="compileerror") {col[i].style.color="gold";}
+		if (col[i].innerText.toLowerCase()=="memorylimitexceeded") {col[i].style.color="#00008B";}
+		if (col[i].innerText.toLowerCase()=="runtimeerror") {col[i].style.color="#0000CD";}
 	}
 	start();
 

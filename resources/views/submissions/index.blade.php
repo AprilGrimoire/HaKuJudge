@@ -19,11 +19,10 @@
     <tr>
         <td class="sub_id">{{ $submission->id }}</td>
         <td class="sub_name"><a href="{{ route('problems.show', $submission->problem) }}">{{ $submission->problem->title }}</a></td>
-        <td class="sub_state"><a href="{{ route('submissions.show', $submission) }}">{{ $submission->status }}</a></td>
+        <td class="sub_state"><a href="{{ route('submissions.show', $submission) }}" class="sub_state">{{ $submission->status }}</a></td>
         <td class="sub_score">{{ isset($submission->score)?$submission->score:"N/A" }}</td>
         <td class="sub_time">{{ $submission->time? $submission->time."ms":"N/A" }}</td>
         <td class="sub_memory">{{ $submission->memory?strval(round(intval($submission->memory)/1000000,3))."MB":"N/A" }}</td>
-        <a href="{{ route('submissions.show', $submission) }}"></a>
         <td class="sub_user">{{ $submission->user->name }}</td>
     </tr>
     @endforeach
